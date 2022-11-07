@@ -38,7 +38,7 @@ function Video(props) {
             <img className="header__form__avatar" src={image} alt="brainflix-avatar"/>
             </div>
             <div className="video__form-wrapper2">
-            <label htmlFor=""> JOIN THE CONVERSATION</label>
+            <label className="video__label-form" htmlFor=""> JOIN THE CONVERSATION</label>
             <input className="video__form-input" type="textarea" placeholder="Add a new comment" />
             <button className ="video__comment-btn">COMMENT</button>
             </div>

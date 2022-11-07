@@ -1,0 +1,39 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/variables'as *;
+
+.comments {
+    margin: 0;
+    padding-inline-start: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+
+    &__list {
+
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+        border-top: 1px solid #E1E1E1;
+        border-bottom: 1px solid #E1E1E1;
+        padding-top: 1rem;
+        
+    }
+
+    &__avatar-holder{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color:#E1E1E1;
+        vertical-align: top;
+    }
+
+    &__list-wrapper2-info{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    &__text {
+        text-align: left;
+    }
+}
