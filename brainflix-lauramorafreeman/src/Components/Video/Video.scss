@@ -79,8 +79,16 @@
         display: flex;
         justify-content: center;
         gap: 16px;
-        // flex-direction: column;
+        // flex-direction: column;    
+    }
 
+    &__form-avatar-2 {
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: 20% 50%;
     }
 
     &__form-wrapper2{

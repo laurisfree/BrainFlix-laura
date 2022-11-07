@@ -35,7 +35,7 @@ function Video(props) {
         </li>
         <form className="video__form">
             <div className="video__form-wrapper1">
-            <img className="header__form__avatar" src={image} alt="brainflix-avatar"/>
+            <img className="video__form-avatar-2" src={image} alt="brainflix-avatar"/>
             </div>
             <div className="video__form-wrapper2">
             <label className="video__label-form" htmlFor=""> JOIN THE CONVERSATION</label>
