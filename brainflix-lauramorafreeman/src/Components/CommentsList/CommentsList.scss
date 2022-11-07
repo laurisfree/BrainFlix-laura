@@ -28,9 +28,25 @@
         vertical-align: top;
     }
 
+    &__list-wrapper1 {
+        @include desktop {
+            width: 100%;
+        }
+    }
+
+    &__list-wrapper2 {
+        @include desktop {
+            width: 100%;
+        }
+    }
+
     &__list-wrapper2-info{
         display: flex;
         justify-content: space-between;
+
+        @include desktop {
+            width: 100%;
+        }
     }
     
     &__text {

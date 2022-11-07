@@ -6,6 +6,13 @@
     // padding: 0 1rem;
     padding: 1rem;
 
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
     &__main {
         display: flex;
         flex-direction: column;
@@ -28,6 +35,10 @@
             // align-self: flex-start;
             // ali;
             // flex-basis: 3.125rem;
+            // margin-right: 18.75rem;
+            // display: inline-flex;
+            // align-self:flex-start;
+            flex-direction: row;
         }
     }
 
@@ -35,12 +46,12 @@
         background-image: cover;
         max-height: 1.5625rem;
         max-width: 7.5rem;
-        align-self: center;
+        // align-self: center;
 
         @include tablet {
             // align-content: flex-start;
             // max-width: 3.125rem;
-            // align-self: flex-start;
+            align-self: flex-start;
         }
     
     }
