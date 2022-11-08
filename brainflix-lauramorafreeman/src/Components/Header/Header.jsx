@@ -6,7 +6,7 @@ import image from '../../image/Mohan-muruge.jpg'
 function Header () {
     return (
     <div className="header"> 
-        <div className="header__main flex-container">
+        <div className="header__main">
             <div className='header__main-image-wrapper flex-item'>
                 <img className="header__image" src={logo} alt="brainflix-logo" />
             </div>
