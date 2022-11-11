@@ -28,9 +28,12 @@ function VideoDetails (props){
                     </p>   
                 </div>
             </div>
-            <p className="video__time-description">
-            {props.playingVideo.description}
-            </p>
+                <p className="video__time-description">
+                {props.playingVideo.description}
+                </p>
+            {/* <div className="video__comments-arr">
+                    <p> {props.playingVideo.comments.length} Comments</p>
+            </div> */}
             <form className="video__form">
                 <div className="video__form-wrapper1">
                     <img className="video__form-avatar-2" src={image} alt="brainflix-avatar"/>
