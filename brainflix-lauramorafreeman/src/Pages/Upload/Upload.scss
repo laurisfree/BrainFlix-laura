@@ -22,6 +22,10 @@
 
     &__holder{
 
+        @include tablet {
+            width: 70%;
+        }
+
     }
     &__label-your-video {
         color: #AFAFAF;

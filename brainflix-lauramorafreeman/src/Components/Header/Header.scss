@@ -53,8 +53,6 @@
         // align-self: flex-end;
 
         @include tablet {
-            // align-content: flex-start;
-            // max-width: 3.125rem;
             align-self: flex-start;
         }
     
@@ -64,16 +62,6 @@
         // padding-top: 1rem;
         width: 100%;
         display: flex;
-        // flex-direction: row-reverse;
-        // gap: 1rem;
-        // width: auto;
-        // margin: 0;
-        // justify-content: space-between;
-        // flex-wrap: wrap;
-        // flex-flow: row wrap;
-        // justify-content: space-around;
-        // flex-flow: row wrap;
-        
         flex-direction: row-reverse;
         // align-items: stretch;
         gap: 16px;
@@ -128,9 +116,6 @@
         padding-top: 1rem;
         display: flex;
         flex-grow: 1;
-        // display: hidden;
-        // padding-top: 1rem;
-        // position: relative;
 
 
         @include tablet {
@@ -158,9 +143,6 @@
     }
 
     &__search-wrapper {
-        // display: hidden;
-        // align-self: inherit;
-        // flex-basis: content;
         display: flex;
         // width: 6.25rem;
         // margin-right: 1rem;
@@ -187,33 +169,11 @@
         line-height: 1.25rem;
         font-weight: 700;
         margin-top: 1rem;
-        // display: flex;
-        // flex-grow: 2;
-        // width: 36.5rem;
-        // flex-grow: 3;
-        // margin-right: 0;
-        // padding-right: 0;
-        // padding-right: 3.125rem;
-        // padding-left: 3.125rem;
-        // padding-right: 1rem;
-        // background-position: 1%;
-        // margin-left: 4rem;
-        // overflow: none;
-        // align-self: flex-end;
-        // flex-basis: content;
-        // width: auto;
-        // margin-right: auto;
 
 
         @include tablet {
             width: 10rem;
             height: .625rem;
-            // display: flex;
-            // order: 2;
-            // margin-top: 0;
-            // order: 1;
-            // height: 2.5rem;
-            // padding-bottom: 0;
         }
     }
 
@@ -279,25 +239,4 @@
     display: flex;
 }
 
-// .flex-item {
 
-//     @include tablet {
-
-//         .flex-item:nth-of-type(1) { order: 1; }
-//         .flex-item:nth-of-type(2) { order: 4; }
-//         .flex-item:nth-of-type(3) { order: 2; }
-//         .flex-item:nth-of-type(4) { order: 3; }
-//     }
-// }
-
-
-
-        // &__avatar__wrapper {
-        //     padding-top: 1rem;
-        //     display: flex;
-        //     // margin-right: 1rem;
-
-        //     @include tablet {
-        //         order: 5;
-        //     }
-        // }

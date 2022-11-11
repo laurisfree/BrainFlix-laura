@@ -14,15 +14,30 @@ video {
     max-width: 100%;
 }
 
-.video-flex{
-    display: flex;
+.video-flex {
+    // display: flex;
+    // flex-direction: column;
+    // width: 100%;
+
+    @include desktop {
+        padding-right: 1rem;
+        display: flex;
+        gap: 1rem;
+    }
 }
 
 .video-details {
-    width: 75%;
+
+    @include desktop {
+        width: 75%;
+    }
 }
 
 // video list
 .video {
-    width: 25%;
+
+    @include desktop {
+        width: 25%;
+        // align-items: center;
+    }
 }
