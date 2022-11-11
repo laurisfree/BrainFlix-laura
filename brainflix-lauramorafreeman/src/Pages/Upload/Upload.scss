@@ -1,0 +1,103 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/variables' as *;
+
+
+.video-play{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+
+    &__title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+
+    }
+
+    &__label-thumb{
+        color: #AFAFAF;
+    }
+
+    &__holder{
+
+    }
+    &__label-your-video {
+        color: #AFAFAF;
+        padding-top: 1rem;
+
+    }
+
+    &__label-your-video-input{
+        color: #AFAFAF;
+        height: 2.5rem;
+    }
+
+    &__label-description {
+        color: #AFAFAF;
+        padding-top: 1rem;
+
+    }
+
+    &__label-your-video-description-input {
+
+        height: 12.5rem;
+    }
+
+    &__btn-wrapper {
+
+        @include tablet {
+            display: flex;
+            justify-content: flex-end;
+            border-top: 1px solid #AFAFAF;
+        }
+    }
+
+    &__publish-btn {
+        height: 2.5rem;
+        background-color: #0095FF;
+        background-image: url(../../../src/icons/upload.svg);
+        background-repeat: no-repeat;
+        background-position: center left;
+        border-radius: .3125rem;
+        color: #FFFF;
+        font-size: .75rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+        background-position: 1%;
+        margin-top: 1rem;
+        width: 100%;
+
+        @include tablet {
+            width: 15.625rem;
+            align-self: flex-end;
+        }
+
+    }
+
+    &__cancel-btn {
+        height: 2.5rem;
+        background-color: #FFFF;
+        background-image: url(../../../src/icons/upload.svg);
+        background-repeat: no-repeat;
+        background-position: center left;
+        border-radius: .3125rem;
+        color: #0095FF;
+        font-size: .75rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+        background-position: 1%;
+        margin-top: 1rem;
+        width: 100%;
+        border: none;
+
+        @include tablet {
+            width: 15.625rem;
+            align-self: flex-end;
+        }
+
+    }
+
+
+}

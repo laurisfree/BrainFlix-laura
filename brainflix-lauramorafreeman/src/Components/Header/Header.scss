@@ -32,18 +32,11 @@
             align-items: center;
         }
 
-       
     }
 
     &__main-image-wrapper {
 
         @include tablet {
-            // align-self: flex-start;
-            // ali;
-            // flex-basis: 3.125rem;
-            // margin-right: 18.75rem;
-            // display: inline-flex;
-            // align-self:flex-start;
             flex-direction: row;
             margin-right: auto;
         }

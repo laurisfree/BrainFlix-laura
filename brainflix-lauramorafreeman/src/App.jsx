@@ -1,4 +1,8 @@
 import './App.scss';
+import Home from './Pages/Home/Home'
+//import VideoPlayer from './Pages/VideoPlayer/VideoPlayer';
+import Upload from './Pages/Upload/Upload'
+import{BrowserRouter, Routes, Route} from "react-router-dom"
 import {useState} from "react"
 import Header from './Components/Header/Header';
 import Video from "./Components/Video/Video"
@@ -8,30 +12,23 @@ import videoData from "./data/video-details.json"
 
 
 function App() {
-  const [playingVideo, setPlayingVideo] = useState (videoData[0]);
-  const [videoList, setVideoList] = useState (videoData);
- 
 
-  const handleVideoSelection = (selectedId) => {
-    const foundVideo = videoList.find(
-      (video) => video.id === selectedId
-    );
-    setPlayingVideo(foundVideo);
-  };
-  
   return (
-    <div className='App'>
-      <Header />
-    
 
-      <Video playingVideo={playingVideo} />
-      <div className='video-flex'>
-        <VideoDetails playingVideo={playingVideo}/>
-        <VideoList handleVideoSelection={handleVideoSelection} videoList={videoList} playingVideo={playingVideo} />
-      </div>
+    <div className='App'>
+
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path ="/" element= {<Home/>}/>
+          <Route path ="/videos" element= {<Home/>}/>
+          <Route path ="/videos/:id" element= {<Home/>}/>
+          <Route path = "/upload" element= {<Upload/>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
-    }
+}
 
 
 export default App;
