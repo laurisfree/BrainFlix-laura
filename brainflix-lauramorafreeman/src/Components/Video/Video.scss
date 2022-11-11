@@ -1,16 +1,27 @@
-@use '../../styles/partials/fonts' as *;
 @use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
 @use '../../styles/partials/variables'as *;
 
 .video {
     
+    // box-sizing: border-box;
+    // display: flex;
+    // flex-direction: column;
+
+    // @include tablet {
+    //     display: flex;
+    // }
 
     &__item{
         list-style: none;
+        // display: flex;
         
     }
     
     &__image {
+        object-fit: cover;
+        height: auto;
+        width: 100%;
         padding-left: 0;
         padding-right: 0;
 
@@ -19,9 +30,10 @@
         font-size: 1.5rem;
         line-height: 2rem;
         font-weight: 700;
-        padding-top: 1.5rem;
+        padding-top: 0;
         padding-left: 1rem;
         padding-right: 1rem;
+        text-align: left;
     }
 
     &__info-wrapper {
@@ -34,6 +46,10 @@
         padding-left: 1rem;
         padding-right: 1rem;
         
+    }
+
+    &__channel {
+        text-align: left;
     }
 
     &__views{
@@ -54,6 +70,12 @@
         padding-right: 1rem;
     }
 
+    &__time-description {
+        text-align: left;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
     &__form {
         padding-left: 1rem;
         padding-right: 1rem;
@@ -61,8 +83,16 @@
         display: flex;
         justify-content: center;
         gap: 16px;
-        // flex-direction: column;
+        // flex-direction: column;    
+    }
 
+    &__form-avatar-2 {
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: 20% 50%;
     }
 
     &__form-wrapper2{
@@ -70,6 +100,15 @@
         flex-direction: column;
         width: 100%;
         gap: 1rem;
+    }
+
+    &__label-form {
+        text-align: left;
+        color: #AFAFAF;
+        font-size: .75rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+
     }
 
     &__form-input {

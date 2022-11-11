@@ -1,6 +1,13 @@
 import "./CommentsList.scss"
 
 const CommentsList = function (props){
+
+    let currentDate = new Date(props.date).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit"
+    })
+
     return (
         <>
         <ul className="comments">
@@ -12,7 +19,7 @@ const CommentsList = function (props){
             <div className="comments__list-wrapper2">
                 <div className="comments__list-wrapper2-info">
                     <p className="comments__name">{props.name}</p>
-                    <p className="comments__date">{props.date}</p>
+                    <p className="comments__date">{currentDate}</p>
                 </div>
             <p className="comments__text">{props.comment}</p>
             </div>
