@@ -14,6 +14,50 @@
         line-height: 2rem;
         font-weight: 700;
 
+        @include tablet {
+        font-size: 2.0625rem;
+        line-height: 2.75rem;
+        font-weight: 700;
+        }
+    }
+
+    &__form-wrapper-main{
+
+        @include desktop {
+            display: flex;
+            // flex-direction: row;
+            justify-content: center;
+            align-content: space-between;
+            gap: 1rem;
+            border-bottom: 1px solid #AFAFAF;
+            border-top: 1px solid #AFAFAF;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    }
+
+    &__wrapper-desktop-1 {
+
+        @include desktop {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        }
+
+    }
+
+    &__wrapper-desktop-2 {
+
+        display: flex;
+        flex-direction: column;
+        // flex-direction: ;
+
+        @include desktop {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        padding-top: 1rem;
+        }
     }
 
     &__label-thumb{
@@ -22,8 +66,14 @@
 
     &__holder{
 
+        border-radius: .3125rem;
+
         @include tablet {
             width: 70%;
+        }
+
+        @include desktop {
+            width: 100%;
         }
 
     }
@@ -34,6 +84,8 @@
     }
 
     &__label-your-video-input{
+        border: 1px solid #AFAFAF;
+        border-radius: .3125rem;
         color: #AFAFAF;
         height: 2.5rem;
     }
@@ -45,21 +97,30 @@
     }
 
     &__label-your-video-description-input {
-
+        border: 1px solid #AFAFAF;
+        border-radius: .3125rem;
         height: 12.5rem;
+
+        @include desktop {
+            height: 11rem;
+        }
     }
 
     &__btn-wrapper {
 
         @include tablet {
             display: flex;
-            justify-content: flex-end;
+            flex-direction: row-reverse;
             border-top: 1px solid #AFAFAF;
+        }
+
+        @include desktop {
+            border-top: none;
         }
     }
 
     &__publish-btn {
-        height: 2.5rem;
+        height: 3.5rem;
         background-color: #0095FF;
         background-image: url(../../../src/icons/upload.svg);
         background-repeat: no-repeat;
