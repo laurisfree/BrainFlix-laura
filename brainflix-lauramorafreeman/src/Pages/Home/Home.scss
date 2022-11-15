@@ -16,13 +16,25 @@ video {
 
 .video-flex{
     display: flex;
+    flex-direction: column;
+
+    @include tablet {
+    display: flex;
+    flex-direction: row;
+    }
 }
 
 .video-details {
+
+    @include tablet {
     width: 75%;
+    }
 }
 
 // video list
 .video {
+
+    @include tablet {
     width: 25%;
+    }
 }
