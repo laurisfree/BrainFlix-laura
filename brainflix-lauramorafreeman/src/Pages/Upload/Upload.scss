@@ -13,7 +13,44 @@
         font-size: 1.5rem;
         line-height: 2rem;
         font-weight: 700;
+    }
 
+    &__main-wrapper {
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            gap: 1rem;
+            border-bottom: 1px solid #E1E1E1;
+            padding-bottom: 1rem;
+            border-top: 1px solid #E1E1E1;
+            padding-top: 1rem;
+        }
+    }
+
+    &__wrapper-1 {
+
+        display: flex;
+        flex-direction: column;
+
+        @include desktop {
+            display: flex;
+            // flex-direction: row;
+            width: 30%;
+        }
+
+    }
+
+    &__wrapper-2{
+        display: flex;
+        flex-direction: column;
+
+        @include desktop {
+            display: flex;
+            // flex-direction: row;
+            width: 70%;
+            padding-top: 2rem;
+        }
     }
 
     &__label-thumb{
@@ -21,6 +58,11 @@
     }
 
     &__holder{
+        max-width: 70%;
+
+        @include desktop {
+            max-width: 100%;
+        }
 
     }
     &__label-your-video {
@@ -43,6 +85,10 @@
     &__label-your-video-description-input {
 
         height: 12.5rem;
+
+        @include desktop {
+            height: 6rem;
+        }
     }
 
     &__btn-wrapper {
@@ -51,6 +97,15 @@
             display: flex;
             justify-content: flex-end;
             border-top: 1px solid #AFAFAF;
+        }
+
+        @include desktop {
+            display: flex;
+            flex-direction: row-reverse;
+            // align-content: flex-start;
+            margin: auto;
+            margin-right: 0;
+            
         }
     }
 
