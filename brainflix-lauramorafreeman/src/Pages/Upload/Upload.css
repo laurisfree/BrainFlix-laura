@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "Avenir Next";
+  src: url(../../font/AvenirNextLTPro-Regular.otf) format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url(../../font/AvenirNextLTPro-Regular.otf) format("opentype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url(../../font/AvenirNextLTPro-Regular.otf) format("opentype");
+  font-weight: 700;
+}
+.video-play {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.video-play__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+.video-play__label-thumb {
+  color: #AFAFAF;
+}
+.video-play__label-your-video {
+  color: #AFAFAF;
+  padding-top: 1rem;
+}
+.video-play__label-your-video-input {
+  color: #AFAFAF;
+  height: 2.5rem;
+}
+.video-play__label-description {
+  color: #AFAFAF;
+  padding-top: 1rem;
+}
+.video-play__label-your-video-description-input {
+  height: 12.5rem;
+}
+@media only screen and (min-width: 768px) {
+  .video-play__btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #AFAFAF;
+  }
+}
+.video-play__publish-btn {
+  height: 2.5rem;
+  background-color: #0095FF;
+  background-image: url(../../../src/icons/upload.svg);
+  background-repeat: no-repeat;
+  background-position: center left;
+  border-radius: 0.3125rem;
+  color: white;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  background-position: 1%;
+  margin-top: 1rem;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .video-play__publish-btn {
+    width: 15.625rem;
+    align-self: flex-end;
+  }
+}
+.video-play__cancel-btn {
+  height: 2.5rem;
+  background-color: white;
+  background-image: url(../../../src/icons/upload.svg);
+  background-repeat: no-repeat;
+  background-position: center left;
+  border-radius: 0.3125rem;
+  color: #0095FF;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  background-position: 1%;
+  margin-top: 1rem;
+  width: 100%;
+  border: none;
+}
+@media only screen and (min-width: 768px) {
+  .video-play__cancel-btn {
+    width: 15.625rem;
+    align-self: flex-end;
+  }
+}/*# sourceMappingURL=Upload.css.map */
