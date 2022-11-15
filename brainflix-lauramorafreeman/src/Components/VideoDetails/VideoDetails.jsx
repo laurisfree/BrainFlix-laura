@@ -31,14 +31,14 @@ function VideoDetails (props){
             <p className="video__time-description">
             {props.playingVideo.description}
             </p>
-            <form className="video__form">
+            <form className="video__form" onSubmit={(event)=>{props.handleSubmitForm(event, event.target.comment.value)}}>
                 <div className="video__form-wrapper1">
                     <img className="video__form-avatar-2" src={image} alt="brainflix-avatar"/>
                 </div>
                 <div className="video__form-wrapper2">
-                    <label className="video__label-form" htmlFor=""> JOIN THE CONVERSATION</label>
-                    <input className="video__form-input" type="textarea" placeholder="Add a new comment" />
-                    <button className ="video__comment-btn">COMMENT</button>
+                    <label className="video__label-form" htmlFor="comment"> JOIN THE CONVERSATION</label>
+                    <input id="comment" name="comment" className="video__form-input" type="text" placeholder="Add a new comment" />
+                    <button type="submit" className ="video__comment-btn">COMMENT</button>
                 </div>
             </form>
             {props.playingVideo.comments && props.playingVideo.comments.map((comment) => (

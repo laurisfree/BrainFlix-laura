@@ -10,17 +10,17 @@ import VideoList from "../../Components/VideoList/VideoList";
 
 
 function App() {
-  const [playingVideo, setPlayingVideo] = useState ({});
-  const [videoList, setVideoList] = useState ([]);
-  const params = useParams ();
-  console.log(params)
+  const [playingVideo, setPlayingVideo] = useState({});
+  const [videoList, setVideoList] = useState([]);
+  const params = useParams();
+  // console.log(params)
 
   useEffect(()=> {
     axios 
       .get("https://project-2-api.herokuapp.com/videos?api_key=4c35f79e-fbfe-4337-915f-11aaf23a1858")
       .then((response)=>{
         setVideoList (response.data)
-        console.log(response.data)
+        // console.log(response.data)
       })
       .catch (err=>console.log(err))
   }, [])
@@ -30,9 +30,8 @@ function App() {
       axios 
       .get(`https://project-2-api.herokuapp.com/videos/${params.id}?api_key=4c35f79e-fbfe-4337-915f-11aaf23a1858`)
       .then((response)=>{
-        setPlayingVideo(response.data)
-      
         console.log(response.data)
+        setPlayingVideo(response.data)
       })
       .catch ()
     } else {
@@ -41,11 +40,11 @@ function App() {
       .then((response)=>{
         setPlayingVideo(response.data)
       
-        console.log(response.data)
+        // console.log(response.data)
       })
       .catch ()
     }
-  }, [params]);
+  }, [params.id, videoList]);
 
   // const handleVideoSelection = (selectedId) => {
   //   const foundVideo = videoList.find(
@@ -53,19 +52,33 @@ function App() {
   //   );
   //   setPlayingVideo(foundVideo);
   // };
+
+  // submit function
+
+  const handleSubmitForm = function(event, comment){
+    event.preventDefault();
+    const newObject = {name: "Laura", comment: comment}
+    axios.post(`https://project-2-api.herokuapp.com/videos/${playingVideo.id}/comments?api_key=4c35f79e-fbfe-4337-915f-11aaf23a1858`, newObject)
+    .then(response =>{
+      axios.get(`https://project-2-api.herokuapp.com/videos/${playingVideo.id}?api_key=4c35f79e-fbfe-4337-915f-11aaf23a1858`)
+      .then(response=>{setPlayingVideo(response.data)})
+      
+    })
+  }
   
   return (
     <div className='App'>
     
-
-      <Video playingVideo={playingVideo} />
+    {playingVideo && <Video playingVideo={playingVideo} />}
       <div className='video-flex'>
-        <VideoDetails playingVideo={playingVideo}/>
-        <VideoList 
+        {playingVideo && <VideoDetails playingVideo={playingVideo}
+                      handleSubmitForm={handleSubmitForm}
+        />}
+        {videoList && playingVideo && <VideoList 
         // handleVideoSelection={handleVideoSelection} 
         videoList={videoList} 
         playingVideo={playingVideo} 
-        />
+        />}
       </div>
     </div>
   );
