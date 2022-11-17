@@ -4,6 +4,7 @@ import videoPreview from '../../image/Upload-video-preview.jpg';
 import arrow from '../../icons/upload.svg';
 import {Link, useNavigate} from 'react-router-dom'
 import {useState} from 'react'
+import axios from 'axios';
 
 
 function VideoPlayer (){
@@ -34,8 +35,11 @@ function VideoPlayer (){
         function handleSubmit (event) {
             event.preventDefault ()
             if (isValidForm ()){
-                alert("Success");
-                navigate ("/")
+                // alert("Success");
+                axios.post('http://localhost:5003/videos', {title: confirmTitle, description: confirmDescription}).then(response =>{
+                    console.log(response)
+                    navigate ("/")
+                })
             }
             else {
                 alert ("Please try again")

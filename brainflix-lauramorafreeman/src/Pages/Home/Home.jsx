@@ -17,7 +17,7 @@ function App() {
 
   useEffect(()=> {
     axios 
-      .get("https://project-2-api.herokuapp.com/videos?api_key=4c35f79e-fbfe-4337-915f-11aaf23a1858")
+      .get("http://localhost:5003/videos")
       .then((response)=>{
         setVideoList (response.data)
         // console.log(response.data)
@@ -28,7 +28,7 @@ function App() {
   useEffect(()=>{
     if(params.id){
       axios 
-      .get(`https://project-2-api.herokuapp.com/videos/${params.id}?api_key=4c35f79e-fbfe-4337-915f-11aaf23a1858`)
+      .get(`http://localhost:5003/videos/${params.id}`)
       .then((response)=>{
         console.log(response.data)
         setPlayingVideo(response.data)
@@ -36,7 +36,7 @@ function App() {
       .catch ()
     } else {
       axios 
-      .get(`https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=4c35f79e-fbfe-4337-915f-11aaf23a1858`)
+      .get(`http://localhost:5003/videos/84e96018-4022-434e-80bf-000ce4cd12b8`)
       .then((response)=>{
         setPlayingVideo(response.data)
       
