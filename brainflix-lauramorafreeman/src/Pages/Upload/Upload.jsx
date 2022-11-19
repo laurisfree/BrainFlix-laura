@@ -36,7 +36,8 @@ function VideoPlayer (){
             event.preventDefault ()
             if (isValidForm ()){
                 // alert("Success");
-                axios.post('http://localhost:5003/videos', {title: confirmTitle, description: confirmDescription}).then(response =>{
+                axios.post('http://localhost:5003/videos', 
+                {title: confirmTitle, description: confirmDescription}).then(response =>{
                     console.log(response)
                     navigate ("/")
                 })
